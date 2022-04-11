@@ -16,7 +16,7 @@ const HomePage = () => {
           </a> {' , or '}
           <a href="/signup">           
             <b>Register</b>
-          </a>{' '}!          
+          </a>{'! '}          
         </p>
       )}
     </Section>
