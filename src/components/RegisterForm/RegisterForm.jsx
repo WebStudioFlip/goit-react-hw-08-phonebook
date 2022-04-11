@@ -3,7 +3,6 @@ import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { signup } from '../redux/auth/auth-operations';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import LoaderComponent from '../Loader';
 import { getIsLoading } from '../redux/auth/auth-selectors';
@@ -46,7 +45,7 @@ const RegisterForm = () => {
   return (
     <div className={styles.wrapper}>
       <form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
-        <TextField
+        <input
           label="Name"
           variant="outlined"
           color="secondary"
@@ -57,7 +56,7 @@ const RegisterForm = () => {
           className={styles.textField}
         />
 
-        <TextField
+        <input
           label="Email"
           variant="outlined"
           color="secondary"
@@ -68,7 +67,7 @@ const RegisterForm = () => {
           className={styles.textField}
         />
 
-        <TextField
+        <input
           label="Password"
           variant="outlined"
           color="secondary"

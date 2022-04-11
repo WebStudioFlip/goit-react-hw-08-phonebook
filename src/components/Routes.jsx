@@ -13,23 +13,25 @@ import LoginPage from '../pages/LoginPage';
 const Routers = () => {
   return (
     <Container>
-      <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route path="/" element={<LayoutPage />}>
-            <Route index element={<HomePage />} />
-            <Route element={<PublicRoute />}>
-              <Route path="signup" element={<RegisterPage />} />
-              <Route path="login" element={<LoginPage />} />
-            </Route>
-            <Route element={<PrivateRoute />}>
-              <Route path="contacts" element={<PhonebookPage />} />
-            </Route>
-            <Route path="*" element={<Navigate to="/" replace />} />
+    <Suspense fallback={<Loader />}>
+      <Routes>
+        <Route path="/" element={<LayoutPage />}>
+          <Route index element={<HomePage />} />
+          <Route element={<PublicRoute />}>
+            <Route path="signup" element={<RegisterPage />} />
+            <Route path="login" element={<LoginPage />} />
           </Route>
-        </Routes>
-      </Suspense>      
-    </Container>
-  );
+          <Route element={<PrivateRoute />}>
+            <Route path="contacts" element={<PhonebookPage />} />
+          </Route>
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+      </Routes>
+    </Suspense>      
+  </Container>
+     );
+    
+ 
 };
 
 export default Routers;

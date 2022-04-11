@@ -16,17 +16,17 @@ const getLinkClassName = ({ isActive }) =>
   isActive ? styles.active : styles.link;
 
 const AuthMenu = () => {
-  const lis = navLinks.map(link => (
-    <li key={link.href}>
-      <NavLink className={getLinkClassName} to={link.href}>
-        {link.name}
+  const authMenu = navLinks.map(({href, name}) => (
+    <li key={href}>
+      <NavLink className={getLinkClassName} to={href}>
+        {name}
       </NavLink>
     </li>
   ));
   return (
-    <header className={styles.nav}>
-      <ul className={styles.headerMenu}>{lis}</ul>
-    </header>
+    <div className={styles.nav}>
+      <ul className={styles.authMenu}>{authMenu}</ul>
+    </div>
   );
 };
 

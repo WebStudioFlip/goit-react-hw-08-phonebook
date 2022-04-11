@@ -8,10 +8,12 @@ import AuthMenu from '../AuthMenu';
 const HeaderBar = () => {
   const isLogin = useSelector(getIsLogin, shallowEqual);
   return (
+    <header>
     <nav className={styles.nav}>
       <HeaderMenu isLogin={isLogin} />
       {isLogin ? <UserInfo /> : <AuthMenu />}
     </nav>
+    </header>
   );
 };
 
