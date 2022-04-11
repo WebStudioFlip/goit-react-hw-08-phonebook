@@ -54,6 +54,7 @@ const RegisterForm = () => {
           value={form.name}
           onChange={handleChange}
           className={styles.textField}
+          placeholder= "Your Name"
         />
 
         <input
@@ -65,6 +66,7 @@ const RegisterForm = () => {
           value={form.email}
           onChange={handleChange}
           className={styles.textField}
+          placeholder= "Your Email"
         />
 
         <input
@@ -76,6 +78,7 @@ const RegisterForm = () => {
           value={form.password}
           onChange={handleChange}
           className={styles.textField}
+          placeholder= "Your PassWord"
         />
 
         <Button
