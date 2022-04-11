@@ -1,11 +1,11 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
-import ContactForm from '../ContactForm';
-import ContactList from '../ContactList';
-import Filter from '../Filter';
+import ContactForm from '../../components/ContactForm';
+import ContactList from '../../components/ContactList';
+import Filter from '../../components/Filter';
 import Section from '../../shared/Section';
-import operations from '../redux/contacts/contacts-operations';
-import { getAllContacts, getContactsLoading } from '../redux/contacts/contacts-selectors';
+import operations from '../../components/redux/contacts/contacts-operations';
+import { getAllContacts, getContactsLoading } from '../../components/redux/contacts/contacts-selectors';
 
 const Phonebook = () => {
     
