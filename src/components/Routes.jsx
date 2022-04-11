@@ -1,14 +1,14 @@
 import { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Loader from './components/Loader';
-import Section from './shared/Section';
-import LayoutPage from './components/LayoutPage/LayoutPage';
-import HomePage from './pages/HomePage/HomePage';
-import PhonebookPage from './pages/PhonebookPage';
-import PublicRoute from './shared/PublicRoute';
-import PrivateRoute from './shared/PrivateRoute';
-import RegisterPage from './pages/RegisterPage/RegisterPage';
-import LoginPage from './pages/LoginPage/LoginPage';
+import Loader from './Loader';
+import Section from '../shared/Section';
+import LayoutPage from '../pages/LayoutPage';
+import HomePage from '../pages/HomePage';
+import PhonebookPage from '../pages/PhonebookPage';
+import PublicRoute from '../shared/PublicRoute';
+import PrivateRoute from '../shared/PrivateRoute';
+import RegisterPage from '../pages/RegisterPage';
+import LoginPage from '../pages/LoginPage';
 
 const Routers = () => {
   return (

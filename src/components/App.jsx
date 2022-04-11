@@ -1,11 +1,21 @@
-import Phonebook from '../pages/PhonebookPage';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { current } from './redux/auth/auth-operations';
 
-const App = () => {  
+import Routes from './Routes';
+
+function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(current());
+  }, [dispatch]);
+
   return (
-    <>
-      <Phonebook />
-    </>
+    <div className="App">
+      <Routes />
+    </div>
   );
-};
+}
 
 export default App;
