@@ -2,8 +2,7 @@
   "name": "goit-react-hw-08-phonebook",
   "version": "0.1.0",
   "private": true,  
-  "author": "Pedchenko Yevhen <pedchenko.yevhen@gmail.com>",
-  "homepage": "https://webstudioflip/goit-react-hw-08-phonebook/",
+  "author": "Pedchenko Yevhen <pedchenko.yevhen@gmail.com>",  
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
