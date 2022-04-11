@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Loader from './Loader';
-import Section from '../shared/Section';
+import Container from '../shared/Container';
 import LayoutPage from '../pages/LayoutPage';
 import HomePage from '../pages/HomePage';
 import PhonebookPage from '../pages/PhonebookPage';
@@ -12,7 +12,7 @@ import LoginPage from '../pages/LoginPage';
 
 const Routers = () => {
   return (
-    <Section>
+    <Container>
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<LayoutPage />}>
@@ -28,7 +28,7 @@ const Routers = () => {
           </Route>
         </Routes>
       </Suspense>      
-    </Section>
+    </Container>
   );
 };
 

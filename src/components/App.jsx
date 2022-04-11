@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { current } from './redux/auth/auth-operations';
 
-import Routes from './Routes';
+import Routers from './Routes';
 
 function App() {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Routes />
+      <Routers />
     </div>
   );
 }
