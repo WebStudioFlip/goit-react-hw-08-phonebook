@@ -1,5 +1,5 @@
 import { useSelector, shallowEqual } from 'react-redux';
-import { getIsLogin } from 'redux/auth/auth-selectors';
+import { getIsLogin } from '../redux/auth/auth-selectors';
 import styles from './header.module.css';
 import HeaderMenu from '../HeaderMenu';
 import UserInfo from '../UserInfo';

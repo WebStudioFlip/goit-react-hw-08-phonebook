@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { login } from '../../redux/auth/auth-operations';
+import { login } from '../redux/auth/auth-operations';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import LoaderComponent from '../Loader';
-import { getIsLoading, getIsLogin } from '../../redux/auth/auth-selectors';
-import { initialState } from './initialState';
+import { getIsLoading, getIsLogin } from '../redux/auth/auth-selectors';
 import styles from './loginForm.module.css';
+
+const initialState = {
+  email: '',
+  password: '',
+};
 
 const LoginForm = () => {
   const [form, setForm] = useState({ ...initialState });

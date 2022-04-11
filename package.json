@@ -5,6 +5,9 @@
   "homepage": "https://webstudioflip/goit-react-hw-08-phonebook/",
   "author": "Pedchenko Yevhen <pedchenko.yevhen@gmail.com>",
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@mui/material": "^5.6.1",
+    "@mui/styled-engine-sc": "^5.6.1",
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",

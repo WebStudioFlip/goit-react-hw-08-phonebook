@@ -1,6 +1,16 @@
 import { NavLink } from 'react-router-dom';
 import styles from './authMenu.module.css';
-import { navLinks } from './navLinks';
+
+const navLinks = [
+  {
+    name: 'Register',
+    href: '/signup',
+  },
+  {
+    name: 'Login',
+    href: '/login',
+  },
+];
 
 const getLinkClassName = ({ isActive }) =>
   isActive ? styles.active : styles.link;

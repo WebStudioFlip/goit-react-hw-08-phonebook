@@ -1,14 +1,19 @@
 import { useState } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
-import { signup } from 'redux/auth/auth-operations';
+import { signup } from '../redux/auth/auth-operations';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import LoaderComponent from '../Loader';
-import { getIsLoading } from 'redux/auth/auth-selectors';
-import { initialState } from './initialState';
+import { getIsLoading } from '../redux/auth/auth-selectors';
 import styles from './registerForm.module.css';
+
+const initialState = {
+  name: '',
+  email: '',
+  password: '',
+};
 
 const RegisterForm = () => {
   const [form, setForm] = useState({ ...initialState });
