@@ -13,9 +13,8 @@ const HomePage = () => {
           Go to the site under your{' '}
           <a href="/login">
             <b>Login</b>
-          </a>{' '}
-          <a href="/signup">
-            {' '}, or{' '}
+          </a> {' , or '}
+          <a href="/signup">           
             <b>Register</b>
           </a>{' '}!          
         </p>
