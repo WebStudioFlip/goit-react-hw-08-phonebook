@@ -1,7 +1,11 @@
 import { useSelector, shallowEqual } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { getIsLogin } from '../../components/redux/auth/auth-selectors';
 import Section from '../../shared/Section';
 import styles from './homePage.module.css';
+
+const getLinkClassName = ({ isActive }) =>
+  isActive ? styles.active : styles.link;
 
 const HomePage = () => {
   const isLogin = useSelector(getIsLogin, shallowEqual);
@@ -11,12 +15,12 @@ const HomePage = () => {
       {!isLogin && (
         <p className={styles.text}>
           Go to the site under your{' '}
-          <a href="/login">
+          <NavLink className={getLinkClassName} to={'/login'}>
             <b>Login</b>
-          </a> {' , or '}
-          <a href="/signup">           
+            </NavLink> {' , or '}
+            <NavLink className={getLinkClassName} to={"/signup"}>           
             <b>Register</b>
-          </a>{'! '}          
+            </NavLink>{'! '}          
         </p>
       )}
     </Section>

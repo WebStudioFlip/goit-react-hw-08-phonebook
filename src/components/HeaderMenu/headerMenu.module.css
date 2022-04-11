@@ -19,7 +19,6 @@
     color: #527c82;
 }
 
-.active {
-    composes: link;
+.active {    
     color: #2196f3;
 }
