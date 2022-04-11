@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { login } from '../redux/auth/auth-operations';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import LoaderComponent from '../Loader';
 import { getIsLoading, getIsLogin } from '../redux/auth/auth-selectors';
@@ -52,8 +51,9 @@ const LoginForm = () => {
   };
 
   return (
+    <div className={styles.wrapper}>
     <form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
-      <TextField
+      <input
         label="Email"
         variant="outlined"
         color="secondary"
@@ -62,9 +62,10 @@ const LoginForm = () => {
         value={form.email}
         onChange={handleChange}
         className={styles.textField}
+        placeholder= "Your Email"
       />
 
-      <TextField
+      <input
         label="Password"
         variant="outlined"
         color="secondary"
@@ -73,6 +74,7 @@ const LoginForm = () => {
         value={form.password}
         onChange={handleChange}
         className={styles.textField}
+        placeholder= "Your Password"
       />
 
       {!isLoading && (
@@ -88,6 +90,7 @@ const LoginForm = () => {
 
       {isLoading && <LoaderComponent />}
     </form>
+    </div>
   );
 };
 

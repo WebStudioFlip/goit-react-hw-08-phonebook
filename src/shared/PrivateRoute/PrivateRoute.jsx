@@ -4,6 +4,7 @@ import useAuth from '../hooks/useAuth';
 const PrivateRoute = () => {
   const isLogin = useAuth();
   const location = useLocation();
+  console.log('Priv',isLogin)
   if (!isLogin) {
     return <Navigate to="/login" state={{ from: location }} />;
   }

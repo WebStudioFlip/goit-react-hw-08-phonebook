@@ -10,16 +10,14 @@ const HomePage = () => {
       <h1 className={styles.title}>Welcome to the Phonebook!</h1>
       {!isLogin && (
         <p className={styles.text}>
-          For using this Phonebook safely please get your own account on{' '}
-          <a href="/signup">
-            {' '}
-            <b>Registration Page</b>
-          </a>{' '}
-          or just{' '}
+          Go to the site under your{' '}
           <a href="/login">
             <b>Login</b>
           </a>{' '}
-          if your already have account.
+          <a href="/signup">
+            {' '}, or{' '}
+            <b>Register</b>
+          </a>{' '}!          
         </p>
       )}
     </Section>

@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.form {    
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.textField{
+    min-height: 40px;
+    margin-bottom: 20px;
+    padding: 5px 15px;
+    font-size: 18px;
+}

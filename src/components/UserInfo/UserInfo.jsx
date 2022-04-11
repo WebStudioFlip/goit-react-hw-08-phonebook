@@ -1,8 +1,8 @@
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
-import defaultAvatar from './avatar.png';
-import { logout } from 'redux/auth/auth-operations';
+import blank_avatar from './blank.jpg';
+import { logout } from '../redux/auth/auth-operations';
 import Button from '@mui/material/Button';
-import { getUser } from 'redux/auth/auth-selectors';
+import { getUser } from '../redux/auth/auth-selectors';
 import styles from './userInfo.module.css';
 
 const UserInfo = () => {
@@ -13,7 +13,7 @@ const UserInfo = () => {
   return (
     <div className={styles.container}>
       <img
-        src={defaultAvatar}
+        src={blank_avatar}
         alt="Default Avatar"
         width="32"
         className={styles.avatar}
